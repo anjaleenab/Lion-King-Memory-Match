@@ -1,5 +1,59 @@
+body{
+  display: flex;
+  position: relative;
+  border: 40px double solid;
+  background-color: rgba(245, 213, 186, 0.849);
+  margin: auto;
+}
+
+header {
+display: flex;
+text-align: center;
+position: relative;
+justify-content: center;
+align-content: center;
+border: double solid;
+
+}
+
+aside {
+  font-size: 40px;
+  margin-top: 50px;
+  margin-left: 50px;
+  flex-direction: row;
+  text-align: center;
+  border:20px double solid;
+}
+
+aside > div {
+  height: 100px;
+  width: 300px;
+  background-color: lightblue;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  position: 100px right;
+
+}
+
+main {
+  position: relative;
+  text-align: center;
+}
+
+.container {
+  height: 800px;
+  width: 800px;
+}
 
 
 .lfz-card {
-  background-image: url("assets\images\lfz-card.jpg");
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  flex-flow: row wrap;
+  /* background-image: url("assets\images\lfz-card.jpg"); */
+  background-color: black;
+  align-content: space-around;
+
 }
