@@ -1,5 +1,4 @@
 body{
-  display: flex;
   position: relative;
   border: 40px double solid;
   background-color: rgba(245, 213, 186, 0.849);
@@ -7,22 +6,21 @@ body{
 }
 
 header {
-display: flex;
+  font-size: 90px;
+font-weight: bold;
 text-align: center;
 position: relative;
 justify-content: center;
 align-content: center;
-border: double solid;
+border: 2px solid black;
+margin: 10px;
 
 }
 
 aside {
   font-size: 40px;
-  margin-top: 50px;
-  margin-left: 50px;
-  flex-direction: row;
-  text-align: center;
-  border:20px double solid;
+   align-items: center;
+ width: 30%;
 }
 
 aside > div {
@@ -42,16 +40,16 @@ main {
 }
 
 .container {
-  height: 800px;
-  width: 800px;
+  position: relative;
+  border: 30px double black;
 }
 
 
 .lfz-card {
   display: inline-block;
+  position: relative;
   height: 200px;
   width: 200px;
-  flex-flow: row wrap;
   /* background-image: url("assets\images\lfz-card.jpg"); */
   background-color: black;
   align-content: space-around;
