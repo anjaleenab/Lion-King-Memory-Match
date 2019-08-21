@@ -44,6 +44,7 @@ aside {
   justify-content: space-around;
   align-content: space-around;
   margin-left: 50px;
+
  }
 
 header {
@@ -66,4 +67,8 @@ aside > div {
   position: 100px right;
   border: 1px solid;
 
+}
+
+.cardone {
+  background-image:url("assets\images\lfz-card.jpg");
 }
