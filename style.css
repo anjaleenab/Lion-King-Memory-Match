@@ -1,57 +1,52 @@
-body{
-  position: relative;
-  border: 40px double solid;
-  background-color: rgba(245, 213, 186, 0.849);
-  margin: auto;
+*{
+  box-sizing: border-box;
 }
 
+body {
+background-color:tan;
+margin: 0;
+}
+
+main {
+  float: left;
+  width: 70%;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+aside {
+  float: left;
+  width: 30%;
+  font-size: 40px;
+  padding: 0 3rem;
+}
+
+ .lfz-card, .matching {
+  border: 1px solid;
+  height: 300px;
+  width: 400px;
+ }
+
 header {
-  font-size: 90px;
+font-size: 90px;
 font-weight: bold;
 text-align: center;
 position: relative;
-justify-content: center;
 align-content: center;
 border: 2px solid black;
 margin: 10px;
 
 }
 
-aside {
-  font-size: 40px;
-   align-items: center;
- width: 30%;
-}
-
 aside > div {
   height: 100px;
-  width: 300px;
   background-color: lightblue;
-  margin: 20px;
+  margin-bottom: 20px;
   justify-content: center;
   align-items: center;
   position: 100px right;
-
-}
-
-main {
-  position: relative;
-  text-align: center;
-}
-
-.container {
-  position: relative;
-  border: 30px double black;
-}
-
-
-.lfz-card {
-  display: inline-block;
-  position: relative;
-  height: 200px;
-  width: 200px;
-  /* background-image: url("assets\images\lfz-card.jpg"); */
-  background-color: black;
-  align-content: space-around;
 
 }
