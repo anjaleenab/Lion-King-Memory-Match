@@ -3,7 +3,11 @@
 }
 
 body {
-background-color:tan;
+background-image: url("assets/images/lfz-background.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+width: 100%;
 margin: 0;
 }
 
@@ -18,33 +22,28 @@ main {
   flex-wrap: wrap;
   width: 2005px;
   height: 1000px;
-  border: 1px solid;
   padding-right: 5px;
   padding-top: 35px;
-
-
-
-
 }
+
 aside {
   text-align: center;
   float: left;
   width: 20%;
   height: 1000px;
-  font-size: 40px;
+  font-size: 60px;
   padding: 0 2rem;
-  border: 1px solid;
   margin: 4px;
 }
 
- .lfz-card, .matching {
-  border: 1px solid;
+ .lfz-card, .js-logo, .css-logo, .docker-logo, .gitHub-logo,
+  .html-logo, .js-logo, .php-logo, .react-logo, .node-logo,
+  .mysql-logo {
   height: 270px;
   width: 280px;
   justify-content: space-around;
   align-content: space-around;
   margin-left: 50px;
-
  }
 
 header {
@@ -53,22 +52,116 @@ font-weight: bold;
 text-align: center;
 position: relative;
 align-content: center;
-border: 2px solid black;
 margin: 10px;
-
 }
 
 aside > div {
   height: 130px;
-  background-color: lightblue;
   margin-bottom: 20px;
   justify-content: center;
   align-items: center;
   position: 100px right;
   border: 1px solid;
-
 }
 
-.cardone {
-  background-image:url("assets\images\lfz-card.jpg");
+.lfz-card {
+  position: absolute;
+  background-image: url("./assets/images/lfz-card.jpg");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+
+.js-logo {
+  background-image: url("./assets/images/js-logo.png");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+
+.css-logo {
+  background-image: url("./assets/images/css-logo.png");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+
+.docker-logo {
+  background-image: url("./assets/images/docker-logo.jpg");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+
+.gitHub-logo {
+  background-image: url("./assets/images/gitHub-logo.png");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+
+.html-logo {
+  background-image: url("./assets/images/html-logo.png");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+
+.php-logo {
+  background-image: url("./assets/images/php-logo.jpeg");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+
+.react-logo {
+  background-image: url("./assets/images/react-logo.png");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+
+.node-logo {
+  background-image: url("./assets/images/node-logo.png");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+.mysql-logo {
+  background-image: url("./assets/images/mysql-logo.jpg");
+  background-size: contain;
+  height: 280px;
+  width: 280px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*make sure this class remains at the bottom of the CSS page*/
+.hidden {
+display: none;
 }
