@@ -1,6 +1,5 @@
 $(document).ready(initializeApp);
 
-debugger;
 var firstCardClicked = null;
 var secondCardClicked= null;
 var matches = null;
@@ -13,23 +12,17 @@ $(".lfz-card").on("click", handleCardClick);
 }
 
 
-
-// var nextDivBackgroundUrls = [];
-// var lastDivBackgroundUrl = nextDivBackgroundUrls[nextDivBackgroundUrls.length - 1];
-// console.log(lastDivBackgroundUrl);
-// console.log(nextDivBackgroundUrls);
 function handleCardClick (event) {
 $(event.currentTarget).addClass("hidden");
 matchCards();
 }
 
 function matchCards() {
-
   console.log('Event:', event.currentTarget);
   if (clickCounter === 0) {
     firstCardClicked = $(event.currentTarget);
     clickCounter++;
-  } else if(clickCounter > 0){
+  } else if(clickCounter > 0 ){
     secondCardClicked = $(event.currentTarget);
     var nextDivBackgroundUrl1 = firstCardClicked.next().css('background-image');
     var nextDivBackgroundUrl2 = secondCardClicked.next().css('background-image');
@@ -38,21 +31,44 @@ function matchCards() {
       if (nextDivBackgroundUrl1 == nextDivBackgroundUrl2) {
       console.log('cards match');
       matches++;
-
+        setNulls();
         if(matches === max_matches){
-      var modal = $('modal').addClass('modal').css('display:', 'show').text('Congratulations, you won!');
-      }
+          console.log('Out of matches!');
+        $('#modal').removeClass('hide-modal');
+        $('#modal-button').removeClass('hide-modal');
+        $('#modal').on('click',hideModal);
+        setNulls();
+
+    }
     } else if (nextDivBackgroundUrl1 !== nextDivBackgroundUrl2){
       setTimeout(function () {
         hideClasses();
         console.log('class removed');
       }, 1500);
-    clickCounter = 0;
+        setNulls();
       }
     }
+    console.log(matches);
   }
 
     function hideClasses(){
-      firstCardClicked.removeClass('hidden');
-      secondCardClicked.removeClass('hidden');
+      $('.hidden').removeClass('hidden');
+      matches =0;
+      return matches;
+
+    }
+
+    function setNulls(){
+      firstCardClicked = null;
+      secondCardClicked = null;
+      clickCounter = 0;
+      return firstCardClicked, secondCardClicked, clickCounter;
+
+    }
+
+    function hideModal(){
+      $('#modal').addClass('hide-modal');
+      $('#modal-button').addClass('hide-modal');
+      console.log('modal button has been clicked');
+      hideClasses();
     }

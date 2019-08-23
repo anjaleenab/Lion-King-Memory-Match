@@ -6,9 +6,10 @@ body {
 background-image: url("assets/images/lfz-background.jpg");
 background-repeat: no-repeat;
 background-size: cover;
-height: 100%;
+min-height: 100vh;
 width: 100%;
 margin: 0;
+background-position: center;
 }
 
 main {
@@ -64,12 +65,30 @@ aside > div {
   border: 1px solid;
 }
 
-.modal{
-  background-color: blue;
-  color: white;
+#modal {
+  background-color: lightgray;
+  width: 700px;
+  height: 350px;
+  position: absolute;
+  z-index: 10;
+  left: 44%;
+  top: 20%;
+  font-size: 70px;
+  justify-content: center;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+
 }
 
-.lfz-card {
+#modal-button {
+  color: black;
+  font-size: 30px;
+  width: 200px;
+  height: 100px;
+}
+
+.lfz-card  {
   position: absolute;
   background-image: url("./assets/images/lfz-card.jpg");
   background-size: contain;
@@ -167,6 +186,6 @@ aside > div {
 
 
 /*make sure this class remains at the bottom of the CSS page*/
-.hidden {
+.hidden, .hide-modal {
 display: none;
 }
