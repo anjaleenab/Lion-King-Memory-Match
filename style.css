@@ -64,6 +64,11 @@ aside > div {
   border: 1px solid;
 }
 
+.modal{
+  background-color: blue;
+  color: white;
+}
+
 .lfz-card {
   position: absolute;
   background-image: url("./assets/images/lfz-card.jpg");
