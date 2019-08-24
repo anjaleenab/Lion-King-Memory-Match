@@ -18,13 +18,11 @@ $(".lfz-card").on("click", handleCardClick);
 function handleCardClick (event) {
 $(event.currentTarget).addClass("hidden");
 matchCards();
-console.log(attempts);
 displayStats();
 
 }
 
 function matchCards() {
-  console.log('Event:', event.currentTarget);
   if (clickCounter === 0) {
     firstCardClicked = $(event.currentTarget);
     clickCounter++;
@@ -32,15 +30,11 @@ function matchCards() {
     secondCardClicked = $(event.currentTarget);
     var nextDivBackgroundUrl1 = firstCardClicked.next().css('background-image');
     var nextDivBackgroundUrl2 = secondCardClicked.next().css('background-image');
-    console.log(nextDivBackgroundUrl1);
-    console.log(nextDivBackgroundUrl2);
       if (nextDivBackgroundUrl1 == nextDivBackgroundUrl2) {
-      console.log('cards match');
       matches++;
         setNulls();
         attempts++;
         if(matches === max_matches){
-          console.log('Out of matches!');
         $('#modal').removeClass('hide-modal');
         $('#modal-button').removeClass('hide-modal');
         $('#modal').on('click',hideModal);
@@ -51,13 +45,11 @@ function matchCards() {
     } else if (nextDivBackgroundUrl1 !== nextDivBackgroundUrl2){
       setTimeout(function () {
         hideClasses();
-        console.log('class removed');
       }, 1500);
         setNulls();
         attempts++;
 
     }
-    console.log(matches);
   }
 }
 
@@ -79,8 +71,8 @@ function matchCards() {
     function hideModal(){
       $('#modal').addClass('hide-modal');
       $('#modal-button').addClass('hide-modal');
-      console.log('modal button has been clicked');
       hideClasses();
+      resetGame();
     }
 
 
@@ -107,6 +99,5 @@ $('#stat3').text(calculateAccuracy);
       attempts = null;
       games_played++;
       displayStats();
-      hideClasses();
       return matches, attempts;
     }

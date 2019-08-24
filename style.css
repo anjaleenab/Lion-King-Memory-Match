@@ -66,6 +66,7 @@ aside > div {
 }
 
 #modal {
+  opacity: .9;
   background-color: lightgray;
   width: 700px;
   height: 350px;
@@ -159,33 +160,6 @@ aside > div {
   height: 280px;
   width: 280px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*make sure this class remains at the bottom of the CSS page*/
 .hidden, .hide-modal {
