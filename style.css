@@ -86,6 +86,8 @@ aside > div {
   font-size: 30px;
   width: 200px;
   height: 100px;
+  border-radius: 25px;
+
 }
 
 .lfz-card  {

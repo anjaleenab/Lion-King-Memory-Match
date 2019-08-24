@@ -5,6 +5,9 @@ var secondCardClicked= null;
 var matches = null;
 var max_matches =2;
 var clickCounter = 0;
+var attempts = null;
+var games_played =null;
+
 
 function initializeApp (){
 $(".lfz-card").on("click", handleCardClick);
@@ -15,6 +18,9 @@ $(".lfz-card").on("click", handleCardClick);
 function handleCardClick (event) {
 $(event.currentTarget).addClass("hidden");
 matchCards();
+console.log(attempts);
+displayStats();
+
 }
 
 function matchCards() {
@@ -32,11 +38,13 @@ function matchCards() {
       console.log('cards match');
       matches++;
         setNulls();
+        attempts++;
         if(matches === max_matches){
           console.log('Out of matches!');
         $('#modal').removeClass('hide-modal');
         $('#modal-button').removeClass('hide-modal');
         $('#modal').on('click',hideModal);
+        games_played++;
         setNulls();
 
     }
@@ -46,10 +54,12 @@ function matchCards() {
         console.log('class removed');
       }, 1500);
         setNulls();
-      }
+        attempts++;
+
     }
     console.log(matches);
   }
+}
 
     function hideClasses(){
       $('.hidden').removeClass('hidden');
@@ -71,4 +81,23 @@ function matchCards() {
       $('#modal-button').addClass('hide-modal');
       console.log('modal button has been clicked');
       hideClasses();
+    }
+
+
+    function calculateAccuracy (){
+ var accuracy = matches / attempts;
+ var accuracyPercent = accuracy *100;
+      if (attempts <=1) {
+        stringAccuracy = '0%';
+      } else {
+        var stringAccuracy = accuracyPercent + '%';
+      }
+ return stringAccuracy;
+    }
+
+    function displayStats(){
+$('#stat1').text(games_played);
+$('#stat2').text(attempts);
+$('#stat3').text(calculateAccuracy);
+
     }
