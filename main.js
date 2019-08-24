@@ -3,7 +3,7 @@ $(document).ready(initializeApp);
 var firstCardClicked = null;
 var secondCardClicked= null;
 var matches = null;
-var max_matches =2;
+var max_matches =9;
 var clickCounter = 0;
 var attempts = null;
 var games_played =null;
@@ -100,4 +100,13 @@ $('#stat1').text(games_played);
 $('#stat2').text(attempts);
 $('#stat3').text(calculateAccuracy);
 
+    }
+
+    function resetGame(){
+      matches = null;
+      attempts = null;
+      games_played++;
+      displayStats();
+      hideClasses();
+      return matches, attempts;
     }
