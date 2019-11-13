@@ -35,6 +35,7 @@ aside {
   font-size: 60px;
   padding: 0 2rem;
   margin: 4px;
+  color: lightgray;
 }
 
   .cover-card, .hyena, .zazu, .lion-king-bird, .mufasa, .pumba,
@@ -54,6 +55,7 @@ text-align: center;
 position: relative;
 align-content: center;
 margin: 10px;
+color: lightgray;
 }
 
 aside > div {
@@ -98,7 +100,7 @@ aside > div {
   background-repeat: no-repeat;
   height: 280px;
   width: 280px;
-  box-shadow: 8px 8px 8px black;
+  box-shadow: 10px 10px 10px black;
 
 
 }
