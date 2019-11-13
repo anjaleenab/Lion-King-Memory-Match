@@ -37,9 +37,8 @@ aside {
   margin: 4px;
 }
 
- .cover-card, .js-logo, .css-logo, .docker-logo, .gitHub-logo,
-  .html-logo, .js-logo, .php-logo, .react-logo, .node-logo,
-  .mysql-logo {
+ .cover-card, .node-logo
+  {
   height: 270px;
   width: 280px;
   justify-content: space-around;
@@ -91,71 +90,51 @@ aside > div {
 
 }
 
-.lfz-card  {
+.cover-card  {
   position: absolute;
-  background-image: url("./assets/images/lfz-card.jpg");
+  background-image: url("./assets/images/LionKingCoverPhoto.png");
   background-size: contain;
   height: 280px;
   width: 280px;
 }
 
-.js-logo {
-  background-image: url("./assets/images/js-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.hyena {
+  background-image: url("./assets/images/hyenas.jpeg");
 }
 
-.css-logo {
-  background-image: url("./assets/images/css-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.lion-king-bird {
+  background-image: url("./assets/images/lion-king-bird.jpeg");
 }
 
-.docker-logo {
-  background-image: url("./assets/images/docker-logo.jpg");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.mufasa {
+  background-image: url("./assets/images/mufasa.jpeg");
 }
 
-.gitHub-logo {
-  background-image: url("./assets/images/gitHub-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.pumba {
+  background-image: url("./assets/images/pumba.jpeg");
 }
 
-.html-logo {
-  background-image: url("./assets/images/html-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.rafiki {
+  background-image: url("./assets/images/rafiki.jpeg");
 }
 
-.php-logo {
-  background-image: url("./assets/images/php-logo.jpeg");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.scar {
+  background-image: url("./assets/images/scar.jpeg");
 }
 
-.react-logo {
-  background-image: url("./assets/images/react-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.simba {
+  background-image: url("./assets/images/simba.jpeg");
 }
 
+.timon {
+  background-image: url("./assets/images/timon.png");
+
+}
 .node-logo {
   background-image: url("./assets/images/node-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+
 }
-.mysql-logo {
-  background-image: url("./assets/images/mysql-logo.jpg");
+.bottom-card {
   background-size: contain;
   height: 280px;
   width: 280px;

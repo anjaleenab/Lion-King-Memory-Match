@@ -10,7 +10,7 @@ var games_played =null;
 
 
 function initializeApp (){
-$(".lfz-card")
+$(".cover-card")
   .on("click", handleCardClick);
 
 }
@@ -68,7 +68,7 @@ function matchCards() {
 }
 
     function noClick() {
-      $('.lfz-card').addClass('nonClickable');
+      $('.cover-card').addClass('nonClickable');
     }
 
     function hideClasses(){
