@@ -3,7 +3,7 @@
 }
 
 body {
-background-image: url("assets/images/lfz-background.jpg");
+background-image: url("assets/images/lionKingBackground.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 min-height: 100vh;
@@ -37,7 +37,8 @@ aside {
   margin: 4px;
 }
 
- .cover-card, .node-logo
+  .cover-card, .hyena, .zazu, .lion-king-bird, .mufasa, .pumba,
+  .timon, .simba, .rafiki, .scar, .simba, .timon, .nala
   {
   height: 270px;
   width: 280px;
@@ -93,17 +94,21 @@ aside > div {
 .cover-card  {
   position: absolute;
   background-image: url("./assets/images/LionKingCoverPhoto.png");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 280px;
   width: 280px;
+  box-shadow: 8px 8px 8px black;
+
+
 }
 
 .hyena {
   background-image: url("./assets/images/hyenas.jpeg");
 }
 
-.lion-king-bird {
-  background-image: url("./assets/images/lion-king-bird.jpeg");
+.zazu {
+  background-image: url("./assets/images/zazu.jpeg");
 }
 
 .mufasa {
@@ -130,14 +135,15 @@ aside > div {
   background-image: url("./assets/images/timon.png");
 
 }
-.node-logo {
-  background-image: url("./assets/images/node-logo.png");
+.nala {
+  background-image: url("./assets/images/nala.jpeg");
 
 }
 .bottom-card {
-  background-size: contain;
+  background-size: cover;
   height: 280px;
   width: 280px;
+  /* box-shadow: 3px 3px 3px black; */
 }
 
 .nonClickable {
