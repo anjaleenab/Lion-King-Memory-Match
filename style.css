@@ -14,17 +14,15 @@ background-position: center;
 
 main {
   float: left;
-  width: 70%;
-  margin-top: 4px;
+  width: 78%;
 }
 
 #container {
   display: flex;
   flex-wrap: wrap;
-  width: 2005px;
-  height: 1000px;
-  padding-right: 5px;
-  padding-top: 35px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 aside {
@@ -35,17 +33,15 @@ aside {
   font-size: 60px;
   padding: 0 2rem;
   margin: 4px;
-  color: lightgray;
+  color: #ddf9ff;
 }
 
-  .cover-card, .hyena, .zazu, .lion-king-bird, .mufasa, .pumba,
-  .timon, .simba, .rafiki, .scar, .simba, .timon, .nala
+  .cover-card, .bottom-card, .container-div
   {
-  height: 270px;
-  width: 280px;
-  justify-content: space-around;
-  align-content: space-around;
-  margin-left: 50px;
+  margin:20px;
+  width: 400px;
+  height: 550px;
+  background-repeat: no-repeat;
  }
 
 header {
@@ -55,7 +51,7 @@ text-align: center;
 position: relative;
 align-content: center;
 margin: 10px;
-color: lightgray;
+color: #ddf9ff;
 }
 
 aside > div {
@@ -97,9 +93,6 @@ aside > div {
   position: absolute;
   background-image: url("./assets/images/LionKingCoverPhoto.png");
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 280px;
-  width: 280px;
   box-shadow: 10px 10px 10px black;
 
 
@@ -141,11 +134,10 @@ aside > div {
   background-image: url("./assets/images/nala.jpeg");
 
 }
+
 .bottom-card {
-  background-size: cover;
-  height: 280px;
-  width: 280px;
-  /* box-shadow: 3px 3px 3px black; */
+  background-size: contain;
+  background-color: #4ec1ef;
 }
 
 .nonClickable {
