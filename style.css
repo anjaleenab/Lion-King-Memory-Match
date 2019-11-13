@@ -3,7 +3,7 @@
 }
 
 body {
-background-image: url("assets/images/lfz-background.jpg");
+background-image: url("assets/images/lionKingBackground.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 min-height: 100vh;
@@ -14,17 +14,15 @@ background-position: center;
 
 main {
   float: left;
-  width: 70%;
-  margin-top: 4px;
+  width: 78%;
 }
 
 #container {
   display: flex;
   flex-wrap: wrap;
-  width: 2005px;
-  height: 1000px;
-  padding-right: 5px;
-  padding-top: 35px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 aside {
@@ -35,16 +33,15 @@ aside {
   font-size: 60px;
   padding: 0 2rem;
   margin: 4px;
+  color: #ddf9ff;
 }
 
- .lfz-card, .js-logo, .css-logo, .docker-logo, .gitHub-logo,
-  .html-logo, .js-logo, .php-logo, .react-logo, .node-logo,
-  .mysql-logo {
-  height: 270px;
-  width: 280px;
-  justify-content: space-around;
-  align-content: space-around;
-  margin-left: 50px;
+  .cover-card, .bottom-card, .container-div
+  {
+  margin:20px;
+  width: 400px;
+  height: 550px;
+  background-repeat: no-repeat;
  }
 
 header {
@@ -54,6 +51,7 @@ text-align: center;
 position: relative;
 align-content: center;
 margin: 10px;
+color: #ddf9ff;
 }
 
 aside > div {
@@ -91,74 +89,59 @@ aside > div {
 
 }
 
-.lfz-card  {
+.cover-card  {
   position: absolute;
-  background-image: url("./assets/images/lfz-card.jpg");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+  background-image: url("./assets/images/LionKingCoverPhoto.png");
+  background-size: cover;
+  box-shadow: 10px 10px 10px black;
+
+
 }
 
-.js-logo {
-  background-image: url("./assets/images/js-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.hyena {
+  background-image: url("./assets/images/hyenas.jpeg");
 }
 
-.css-logo {
-  background-image: url("./assets/images/css-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.zazu {
+  background-image: url("./assets/images/zazu.jpeg");
 }
 
-.docker-logo {
-  background-image: url("./assets/images/docker-logo.jpg");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.mufasa {
+  background-image: url("./assets/images/mufasa.jpeg");
 }
 
-.gitHub-logo {
-  background-image: url("./assets/images/gitHub-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.pumba {
+  background-image: url("./assets/images/pumba.jpeg");
 }
 
-.html-logo {
-  background-image: url("./assets/images/html-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.rafiki {
+  background-image: url("./assets/images/rafiki.jpeg");
 }
 
-.php-logo {
-  background-image: url("./assets/images/php-logo.jpeg");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.scar {
+  background-image: url("./assets/images/scar.jpeg");
 }
 
-.react-logo {
-  background-image: url("./assets/images/react-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.simba {
+  background-image: url("./assets/images/simba.jpeg");
 }
 
-.node-logo {
-  background-image: url("./assets/images/node-logo.png");
-  background-size: contain;
-  height: 280px;
-  width: 280px;
+.timon {
+  background-image: url("./assets/images/timon.png");
+
 }
-.mysql-logo {
-  background-image: url("./assets/images/mysql-logo.jpg");
+.nala {
+  background-image: url("./assets/images/nala.jpeg");
+
+}
+
+.bottom-card {
   background-size: contain;
-  height: 280px;
-  width: 280px;
+  background-color: #4ec1ef;
+}
+
+.nonClickable {
+  pointer-events: none;
 }
 
 /*make sure this class remains at the bottom of the CSS page*/
