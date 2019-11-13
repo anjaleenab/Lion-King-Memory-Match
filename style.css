@@ -161,6 +161,10 @@ aside > div {
   width: 280px;
 }
 
+.nonClickable {
+  pointer-events: none;
+}
+
 /*make sure this class remains at the bottom of the CSS page*/
 .hidden, .hide-modal {
 display: none;
