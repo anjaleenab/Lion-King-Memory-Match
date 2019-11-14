@@ -42,10 +42,11 @@ function matchCards() {
         setNulls();
         attempts++;
         if(matches === max_matches){
-        $('#modal')
-        .removeClass('hide-modal');
-        $('#modal-button')
-        .removeClass('hide-modal');
+          createModal();
+        // $('#modal')
+        // .removeClass('hide-modal');
+        // $('#modal-button')
+        // .removeClass('hide-modal');
         $('#modal')
         .on('click',hideModal);
         games_played++;
@@ -131,4 +132,9 @@ function matchCards() {
       attempts = null;
       displayStats();
       return matches, attempts;
+    }
+
+    function createModal() {
+      var modalDiv =$('div').addClass('modal');
+      modalDiv.appendTo('body');
     }

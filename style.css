@@ -65,29 +65,26 @@ aside > div {
   padding: 25px;
 }
 
-#modal {
-  opacity: .9;
-  background-color: lightgray;
+.modal {
+  opacity: .95;
+  background-color: #ddf9ff;
   width: 700px;
-  height: 350px;
+  height: 240px;
   position: absolute;
-  z-index: 10;
   left: 44%;
   top: 20%;
   font-size: 70px;
   justify-content: center;
-  border-radius: 25px;
-  font-weight: bold;
-  text-align: center;
-
+  display: flex;
+  align-items: center;
 }
 
-#modal-button {
+.modal-button {
   color: black;
   font-size: 30px;
   width: 200px;
   height: 100px;
-  border-radius: 25px;
+  margin-left: 50px;
 
 }
 
