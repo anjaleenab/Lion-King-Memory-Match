@@ -138,10 +138,10 @@ aside > div {
 }
 
 .bottom-card {
-  background-size: contain;
+  background-size: cover;
 }
 
-.nonClickable {
+.disabled {
   pointer-events: none;
 }
 

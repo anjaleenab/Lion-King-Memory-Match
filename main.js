@@ -56,19 +56,30 @@ function matchCards() {
 
     }
     } else if (nextDivBackgroundUrl1 !== nextDivBackgroundUrl2){
-
+      noClick();
       setTimeout(function () {
         hideClasses();
       }, 1500);
         setNulls();
-        attempts++;
 
+        attempts++;
+        setTimeout(function () {
+          addClick() }, 1700);
+        }
+      }
     }
-  }
-}
+
+
 
     function noClick() {
-      $('.cover-card').addClass('nonClickable');
+      $('.container-div')
+      .removeClass('container-div')
+      .addClass('container-div disabled');
+    }
+
+    function addClick() {
+      $('.disabled')
+      .removeClass('disabled')
     }
 
     function hideClasses(){
