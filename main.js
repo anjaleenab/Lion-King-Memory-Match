@@ -10,6 +10,7 @@ var games_played =null;
 
 
 function initializeApp (){
+  createCards();
 $(".cover-card")
   .on("click", handleCardClick);
 
@@ -80,6 +81,9 @@ function matchCards() {
     .removeClass('disabled')
     }
 
+//make a function that makes it so if its the correct match
+//it will still be shown (hidden class will not be taken off)
+
     function hideClasses(){
     $('.hidden')
     .removeClass('hidden');
@@ -105,11 +109,11 @@ function matchCards() {
     resetGame();
     }
 
-
+//fix accuracy to update after 1 match attempt
     function calculateAccuracy (){
     var accuracy = matches / attempts;
     var accuracyPercent = Math.round(accuracy *100);
-      if (attempts <=1) {
+      if (attempts <1) {
         stringAccuracy = '0%';
       } else {
         var stringAccuracy = accuracyPercent + '%';
@@ -135,6 +139,27 @@ function matchCards() {
     }
 
     function createModal() {
-      var modalDiv =$('div').addClass('modal');
-      modalDiv.appendTo('body');
+      var modalDiv =$('<div>').addClass('modal');
+      modalDiv.appendTo('#container');
+    }
+
+    var cardClassArray = ['hyena', 'zazu', 'mufasa', 'pumba', 'rafiki', 'scar', 'simba', 'timon', 'nala'];
+
+    function createCards() {
+      for(var index =0; index<2; index++){
+        for (var classIndex = 0; classIndex < cardClassArray.length; classIndex++) {
+          var containerDiv = $('<div>', {
+            class: 'container-div'
+          });
+          var cardCover = $('<div>', {
+            class: 'cover-card'
+          });
+          var card = $('<div>', {
+            class: cardClassArray[classIndex] + ' bottom-card'
+          });
+          containerDiv.append(cardCover);
+          containerDiv.append(card);
+          $('#container').append(containerDiv);
+        }
+      }
     }
