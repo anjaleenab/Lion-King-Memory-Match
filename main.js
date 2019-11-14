@@ -28,8 +28,6 @@ function matchCards() {
   if (clickCounter === 0) {
 
     firstCardClicked = $(event.currentTarget);
-    console.log(firstCardClicked);
-    console.log('it happened');
     clickCounter++;
   } else if(clickCounter > 0 ){
     secondCardClicked = $(event.currentTarget);
@@ -40,15 +38,15 @@ function matchCards() {
     .next()
     .css('background-image');
       if (nextDivBackgroundUrl1 == nextDivBackgroundUrl2) {
-        console.log(secondCardClicked);
       matches++;
         setNulls();
         attempts++;
         if(matches === max_matches){
-        $('#modal')
-        .removeClass('hide-modal');
-        $('#modal-button')
-        .removeClass('hide-modal');
+          createModal();
+        // $('#modal')
+        // .removeClass('hide-modal');
+        // $('#modal-button')
+        // .removeClass('hide-modal');
         $('#modal')
         .on('click',hideModal);
         games_played++;
@@ -56,72 +54,87 @@ function matchCards() {
 
     }
     } else if (nextDivBackgroundUrl1 !== nextDivBackgroundUrl2){
-
+      noClick();
       setTimeout(function () {
         hideClasses();
       }, 1500);
         setNulls();
-        attempts++;
 
+        attempts++;
+        setTimeout(function () {
+          addClick() }, 1700);
+        }
+      }
     }
-  }
-}
+
+
 
     function noClick() {
-      $('.cover-card').addClass('nonClickable');
+    $('.container-div')
+    .removeClass('container-div')
+    .addClass('container-div disabled');
+    }
+
+    function addClick() {
+    $('.disabled')
+    .removeClass('disabled')
     }
 
     function hideClasses(){
-      $('.hidden')
-      .removeClass('hidden');
-      matches =0;
-      return matches;
+    $('.hidden')
+    .removeClass('hidden');
+    matches =0;
+    return matches;
 
     }
 
     function setNulls(){
-      firstCardClicked = null;
-      secondCardClicked = null;
-      clickCounter = 0;
-      return firstCardClicked, secondCardClicked, clickCounter;
+    firstCardClicked = null;
+    secondCardClicked = null;
+    clickCounter = 0;
+    return firstCardClicked, secondCardClicked, clickCounter;
 
     }
 
     function hideModal(){
-      $('#modal')
-      .addClass('hide-modal');
-      $('#modal-button')
-      .addClass('hide-modal');
-      hideClasses();
-      resetGame();
+    $('#modal')
+    .addClass('hide-modal');
+    $('#modal-button')
+    .addClass('hide-modal');
+    hideClasses();
+    resetGame();
     }
 
-//make it a decimal
+
     function calculateAccuracy (){
- var accuracy = matches / attempts;
- var accuracyPercent = accuracy *100;
+    var accuracy = matches / attempts;
+    var accuracyPercent = Math.round(accuracy *100);
       if (attempts <=1) {
         stringAccuracy = '0%';
       } else {
         var stringAccuracy = accuracyPercent + '%';
       }
- return stringAccuracy;
+    return stringAccuracy;
     }
 
     function displayStats(){
-$('#stat1')
- .text(games_played);
-$('#stat2')
- .text(attempts);
-$('#stat3')
- .text(calculateAccuracy);
+    $('#stat1')
+    .text(games_played);
+    $('#stat2')
+    .text(attempts);
+    $('#stat3')
+    .text(calculateAccuracy);
 
     }
 
     function resetGame(){
       matches = null;
       attempts = null;
-      games_played++;
       displayStats();
       return matches, attempts;
+    }
+
+    function createModal() {
+      var modalDiv =$('div').addClass('modal');
+      modalDiv.appendTo('body');
     }
