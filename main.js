@@ -110,7 +110,7 @@ function matchCards() {
 //make it a decimal
     function calculateAccuracy (){
  var accuracy = matches / attempts;
- var accuracyPercent = accuracy *100;
+ var accuracyPercent = Math.round(accuracy *100);
       if (attempts <=1) {
         stringAccuracy = '0%';
       } else {
