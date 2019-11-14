@@ -48,7 +48,7 @@ function matchCards() {
         // .removeClass('hide-modal');
         // $('#modal-button')
         // .removeClass('hide-modal');
-        $('#modal')
+        $('.modal-button')
         .on('click',hideModal);
         games_played++;
         setNulls();
@@ -101,9 +101,9 @@ function matchCards() {
     }
 
     function hideModal(){
-    $('#modal')
+    $('.modal')
     .addClass('hide-modal');
-    $('#modal-button')
+    $('.modal-button')
     .addClass('hide-modal');
     hideClasses();
     resetGame();
@@ -135,17 +135,21 @@ function matchCards() {
       matches = null;
       attempts = null;
       displayStats();
+      randomizeCardArray();
       return matches, attempts;
     }
 
     function createModal() {
       var modalDiv =$('<div>').addClass('modal');
       modalDiv.appendTo('#container');
+      var modalButton = $('<button>').addClass('modal-button');
+      modalButton.appendTo(modalDiv);
     }
 
     var cardClassArray = ['hyena', 'zazu', 'mufasa', 'pumba', 'rafiki', 'scar', 'simba', 'timon', 'nala'];
 
     function createCards() {
+      randomizeCardArray();
       for(var index =0; index<2; index++){
         for (var classIndex = 0; classIndex < cardClassArray.length; classIndex++) {
           var containerDiv = $('<div>', {
@@ -161,5 +165,14 @@ function matchCards() {
           containerDiv.append(card);
           $('#container').append(containerDiv);
         }
+      }
+    }
+
+    function randomizeCardArray() {
+      for (var placeHolder = cardClassArray.length - 1; placeHolder > 0; placeHolder--) {
+        var newSpot = Math.floor(Math.random() * placeHolder);
+        var temp = cardClassArray[placeHolder];
+        cardClassArray[placeHolder] = cardClassArray[newSpot];
+        cardClassArray[newSpot] = temp;
       }
     }
