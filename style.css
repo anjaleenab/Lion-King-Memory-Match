@@ -10,6 +10,7 @@ min-height: 100vh;
 width: 100%;
 margin: 0;
 background-position: center;
+background-color: black;
 }
 
 main {
@@ -31,7 +32,7 @@ aside {
   float: left;
   width: 20%;
   height: 100%;
-  font-size: 75px;
+  font-size: 42px;
   padding: 0 2rem;
   margin: 4px;
   margin-top:30px;
@@ -57,7 +58,7 @@ color: #ddf9ff;
 }
 
 aside > div {
-  font-size: 75px;
+  font-size: 42px;
   height: 188px;
   margin-bottom: 20px;
   border: 15px solid;
@@ -147,4 +148,64 @@ aside > div {
 /*make sure this class remains at the bottom of the CSS page*/
 .hidden {
 display: none;
+}
+
+
+@media (min-width: 600px) and (max-width: 1423px){
+  .cover-card ,.bottom-card ,.container-div {
+    margin: 33px;
+    height: 200px;
+  }
+  .cover-card, .container-div, .bottom-card {
+    width: 200px;
+  }
+
+  body {
+    width: 100vh;
+    height:105vh;
+    background-color:black;
+  }
+  main {
+    width: 73%;
+  }
+  aside {
+    font-size: 35px;
+  }
+  aside > div {
+    font-size: 35px;
+    margin-bottom: 78px;
+  }
+  #container {
+    height: 100%;
+    padding-right: 100px;
+  }
+}
+
+@media (min-width: 2500px){
+  aside, aside > div {
+    font-size:75px;
+  }
+}
+
+@media (min-width: 512px) and (max-width: 1500px) {
+ aside, aside > div {
+  font-size: 35px;
+ }
+}
+
+@media (min-width: 1433px) and (max-width: 1684px) {
+  #container {
+    padding-right: 238px;
+  }
+}
+
+@media (min-width: 1705px) and (max-width: 2807px) {
+  #container {
+    padding-right: 240px;
+  }
+}
+@media (min-width: 2260px) and (max-width: 2827px) {
+  #container {
+    padding-right: 290px;
+  }
 }
