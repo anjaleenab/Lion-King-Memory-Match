@@ -101,15 +101,12 @@ function matchCards() {
     }
 
     function hideModal(){
-    $('.modal')
-    .addClass('hide-modal');
-    $('.modal-button')
-    .addClass('hide-modal');
+    $('.modal').remove();
     hideClasses();
     resetGame();
     }
 
-//fix accuracy to update after 1 match attempt
+
     function calculateAccuracy (){
     var accuracy = matches / attempts;
     var accuracyPercent = Math.round(accuracy *100);
@@ -140,16 +137,16 @@ function matchCards() {
     }
 
     function createModal() {
-      var modalDiv =$('<div>').addClass('modal');
-      modalDiv.appendTo('#container');
-      var modalButton = $('<button>').addClass('modal-button');
+      var modalDiv =$('<div>').text('Congratulations, you won!').addClass('modal');
+      modalDiv.appendTo('body');
+      var modalButton = $('<button>').text('Play Again').addClass('modal-button');
       modalButton.appendTo(modalDiv);
     }
 
     var cardClassArray = ['hyena', 'zazu', 'mufasa', 'pumba', 'rafiki', 'scar', 'simba', 'timon', 'nala'];
 
     function createCards() {
-      randomizeCardArray();
+       randomizeCardArray();
       for(var index =0; index<2; index++){
         for (var classIndex = 0; classIndex < cardClassArray.length; classIndex++) {
           var containerDiv = $('<div>', {
