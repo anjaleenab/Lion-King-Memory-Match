@@ -10,6 +10,9 @@ var games_played =null;
 
 
 function initializeApp (){
+  if ($('.container-div')) {
+    $('.container-div').remove();
+  }
   createCards();
 $(".cover-card")
   .on("click", handleCardClick);
@@ -25,9 +28,9 @@ $(event.currentTarget)
 
 }
 
+
 function matchCards() {
   if (clickCounter === 0) {
-
     firstCardClicked = $(event.currentTarget);
     clickCounter++;
   } else if(clickCounter > 0 ){
@@ -44,15 +47,10 @@ function matchCards() {
         attempts++;
         if(matches === max_matches){
           createModal();
-        // $('#modal')
-        // .removeClass('hide-modal');
-        // $('#modal-button')
-        // .removeClass('hide-modal');
         $('.modal-button')
-        .on('click',hideModal);
+        .on('click', removeModal);
         games_played++;
         setNulls();
-
     }
     } else if (nextDivBackgroundUrl1 !== nextDivBackgroundUrl2){
       noClick();
@@ -84,6 +82,8 @@ function matchCards() {
 //make a function that makes it so if its the correct match
 //it will still be shown (hidden class will not be taken off)
 
+
+
     function hideClasses(){
     $('.hidden')
     .removeClass('hidden');
@@ -100,9 +100,8 @@ function matchCards() {
 
     }
 
-    function hideModal(){
+    function removeModal(){
     $('.modal').remove();
-    hideClasses();
     resetGame();
     }
 
@@ -132,7 +131,7 @@ function matchCards() {
       matches = null;
       attempts = null;
       displayStats();
-      randomizeCardArray();
+      initializeApp();
       return matches, attempts;
     }
 
@@ -146,8 +145,8 @@ function matchCards() {
     var cardClassArray = ['hyena', 'zazu', 'mufasa', 'pumba', 'rafiki', 'scar', 'simba', 'timon', 'nala'];
 
     function createCards() {
-       randomizeCardArray();
       for(var index =0; index<2; index++){
+        randomizeCardArray();
         for (var classIndex = 0; classIndex < cardClassArray.length; classIndex++) {
           var containerDiv = $('<div>', {
             class: 'container-div'
