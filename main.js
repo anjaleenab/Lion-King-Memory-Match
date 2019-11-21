@@ -1,7 +1,7 @@
 $(document).ready(initializeApp);
 
-var firstCardClicked = null;
-var secondCardClicked= null;
+var firstCardClicked;
+var secondCardClicked;
 var matches = null;
 var max_matches =9;
 var clickCounter = 0;
@@ -16,9 +16,7 @@ function initializeApp (){
   createCards();
 $(".cover-card")
   .on("click", handleCardClick);
-
 }
-
 
 function handleCardClick (event) {
 $(event.currentTarget)
@@ -28,19 +26,14 @@ $(event.currentTarget)
 
 }
 
-
 function matchCards() {
   if (clickCounter === 0) {
     firstCardClicked = $(event.currentTarget);
     clickCounter++;
   } else if(clickCounter > 0 ){
     secondCardClicked = $(event.currentTarget);
-    var nextDivBackgroundUrl1 = firstCardClicked
-    .next()
-    .css('background-image');
-    var nextDivBackgroundUrl2 = secondCardClicked
-    .next()
-    .css('background-image');
+    var nextDivBackgroundUrl1 = firstCardClicked.next().css('background-image');
+    var nextDivBackgroundUrl2 = secondCardClicked.next().css('background-image');
       if (nextDivBackgroundUrl1 == nextDivBackgroundUrl2) {
       matches++;
         setNulls();
@@ -52,12 +45,13 @@ function matchCards() {
         games_played++;
         setNulls();
     }
-    } else if (nextDivBackgroundUrl1 !== nextDivBackgroundUrl2){
+    } else if (nextDivBackgroundUrl1 !== nextDivBackgroundUrl2 ){
       noClick();
       setTimeout(function () {
-        hideClasses();
-      }, 1500);
+        firstCardClicked.removeClass('hidden');
+        secondCardClicked.removeClass('hidden');
         setNulls();
+      }, 1500);
 
         attempts++;
         setTimeout(function () {
@@ -65,8 +59,6 @@ function matchCards() {
         }
       }
     }
-
-
 
     function noClick() {
     $('.container-div')
@@ -77,19 +69,6 @@ function matchCards() {
     function addClick() {
     $('.disabled')
     .removeClass('disabled')
-    }
-
-//make a function that makes it so if its the correct match
-//it will still be shown (hidden class will not be taken off)
-
-
-
-    function hideClasses(){
-    $('.hidden')
-    .removeClass('hidden');
-    matches =0;
-    return matches;
-
     }
 
     function setNulls(){
@@ -104,7 +83,6 @@ function matchCards() {
     $('.modal').remove();
     resetGame();
     }
-
 
     function calculateAccuracy (){
     var accuracy = matches / attempts;
