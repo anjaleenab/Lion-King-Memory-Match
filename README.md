@@ -8,7 +8,7 @@
   * JavaScript
   * jQuery
 
-##Preview
+## Live Preview
 
 <img src="assets\images\memory-match-preview.gif" alt="Lion King Memory Match Preview" style="max-width: 100%;">
 
