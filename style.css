@@ -151,6 +151,22 @@ display: none;
 }
 
 
+/* @media (min-width: 893px ) and (max-width: 1155px) {
+aside {
+  display: flex;
+  position: fixed;
+  margin-top: 1400px;
+  text-align: center;
+  margin-left: 390px;
+}
+aside > div {
+  width: 400px;
+
+}
+
+} */
+
+
 @media (min-width: 600px) and (max-width: 1423px){
   .cover-card ,.bottom-card ,.container-div {
     margin: 33px;
@@ -191,6 +207,15 @@ display: none;
  aside, aside > div {
   font-size: 35px;
  }
+}
+
+@media (min-width: 850px) {
+  aside {
+    font-size: 70px;
+  }
+  #container {
+    padding-right: 25px;
+  }
 }
 
 @media (min-width: 1433px) and (max-width: 1684px) {
