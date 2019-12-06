@@ -22,7 +22,7 @@ main {
 #container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 70%;
   height: 13vh;
   justify-content: center;
 }
@@ -145,26 +145,10 @@ aside > div {
   pointer-events: none;
 }
 
-/*make sure this class remains at the bottom of the CSS page*/
+
 .hidden {
 display: none;
 }
-
-
-/* @media (min-width: 893px ) and (max-width: 1155px) {
-aside {
-  display: flex;
-  position: fixed;
-  margin-top: 1400px;
-  text-align: center;
-  margin-left: 390px;
-}
-aside > div {
-  width: 400px;
-
-}
-
-} */
 
 
 @media (min-width: 600px) and (max-width: 1423px){
@@ -208,6 +192,17 @@ aside > div {
   font-size: 35px;
  }
 }
+
+@media (min-width: 768px) {
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 13vh;
+    justify-content: center;
+  }
+}
+
 
 @media (min-width: 850px) {
   aside {
