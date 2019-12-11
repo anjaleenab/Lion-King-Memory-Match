@@ -151,7 +151,7 @@ display: none;
 }
 
 
-@media (min-width: 600px) and (max-width: 1423px){
+/* @media (min-width: 600px) and (max-width: 1423px){
   .cover-card ,.bottom-card ,.container-div {
     margin: 33px;
     height: 200px;
@@ -161,8 +161,6 @@ display: none;
   }
 
   body {
-    width: 100vh;
-    height:105vh;
     background-color:black;
   }
   main {
@@ -191,9 +189,9 @@ display: none;
  aside, aside > div {
   font-size: 35px;
  }
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   #container {
     display: flex;
     flex-wrap: wrap;
@@ -201,9 +199,9 @@ display: none;
     height: 13vh;
     justify-content: center;
   }
-}
+} */
 
-
+/*
 @media (min-width: 850px) {
   aside {
     font-size: 70px;
@@ -228,4 +226,4 @@ display: none;
   #container {
     padding-right: 290px;
   }
-}
+} */
