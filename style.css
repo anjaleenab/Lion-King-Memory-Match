@@ -6,7 +6,7 @@ body {
 background-image: url("assets/images/lionKingBackground.jpg");
 background-repeat: no-repeat;
 background-size: cover;
-min-height: 100vh;
+height: 100%;
 width: 100%;
 margin: 0;
 background-position: center;
@@ -16,14 +16,14 @@ background-color: black;
 main {
   float: left;
   width: 78%;
-  height: 13vh;
+  height: 100%;
 }
 
 #container {
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
-  height: 13vh;
+  width: 100%;
+  height: 100%;
   justify-content: center;
 }
 
@@ -32,38 +32,36 @@ aside {
   float: left;
   width: 20%;
   height: 100%;
-  font-size: 42px;
+  font-size: 30px;
   padding: 0 2rem;
-  margin: 4px;
-  margin-top:30px;
+  margin: 5px 0px 2px 0px;
   color: #ddf9ff;
 }
 
-  .cover-card, .bottom-card, .container-div
-  {
-  margin:20px;
-  width: 400px;
-  height: 410px;
+  .cover-card, .bottom-card, .container-div {
+  margin:10px;
+  width: 140px;
+  height: 140px;
   background-repeat: no-repeat;
   border-radius: 20px;
  }
 
 header {
-font-size: 90px;
+font-size: 40px;
 text-align: center;
 position: relative;
 align-content: center;
-margin: 10px;
+margin: 5px 0px;
 color: #ddf9ff;
 }
 
 aside > div {
-  font-size: 42px;
-  height: 188px;
-  margin-bottom: 20px;
-  border: 15px solid;
+  font-size: 30px;
+  height: 65px;
+  margin-bottom: 9px;
+  border: 5px solid;
   border-radius: 5px;
-  padding: 25px;
+
 }
 
 .modal {
@@ -151,7 +149,23 @@ display: none;
 }
 
 
-/* @media (min-width: 600px) and (max-width: 1423px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* old media queries */
+/*
+ @media (min-width: 600px) and (max-width: 1423px){
   .cover-card ,.bottom-card ,.container-div {
     margin: 33px;
     height: 200px;
@@ -226,4 +240,4 @@ display: none;
   #container {
     padding-right: 290px;
   }
-} */
+}
