@@ -151,7 +151,7 @@ display: none;
 
 /* new media queries */
 
-@media (min-width: 768px) and (max-height: 1024px ) {
+@media (min-width: 768px) and (max-height: 1366px ) {
   aside {
     font-size: 25px;
   }
@@ -161,6 +161,13 @@ display: none;
     margin-bottom: 40px;
   }
 
+}
+
+@media (min-width: 1024px) and (max-height: 1366px) {
+  #container {
+    padding-right: 200px;
+    margin-left: 50px;
+  }
 }
 
 
