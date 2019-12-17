@@ -233,7 +233,7 @@ aside > div {
 
 }
 
-@media (min-width: 1024px) and (min-width: 1030px) {
+@media (min-width: 1024px) and (max-width: 1030px) {
   #container {
     padding-right: 200px;
     margin-left: 50px;
