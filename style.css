@@ -38,6 +38,10 @@ aside {
   color: #ddf9ff;
 }
 
+  .container-div:hover {
+  transform: scale(.85);
+  }
+
   .cover-card, .bottom-card, .container-div {
   margin:10px;
   width: 140px;
@@ -61,7 +65,7 @@ aside > div {
   margin-bottom: 9px;
   border: 5px solid;
   border-radius: 5px;
-
+  padding-top: 7px;
 }
 
 .modal {
@@ -94,8 +98,6 @@ aside > div {
   background-image: url("./assets/images/LionKingCoverPhoto.png");
   background-size: cover;
   box-shadow: 10px 10px 10px black;
-
-
 }
 
 .hyena {

@@ -96,6 +96,12 @@ function matchCards() {
     }
 
     function displayStats(){
+      if(!games_played) {
+        games_played= '0';
+      }
+      if (!attempts) {
+        attempts = '0';
+      }
     $('#stat1')
     .text(games_played);
     $('#stat2')
