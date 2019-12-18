@@ -39,9 +39,7 @@ aside {
 }
 
   .container-div:hover {
-  transform: scale(.75);
-  /* transform: skewY(10deg); */
-  /* transform: skew(0.1turn); */
+  transform: scale(.85);
   }
 
   .cover-card, .bottom-card, .container-div {
