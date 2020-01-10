@@ -35,6 +35,8 @@ function matchCards() {
     var nextDivBackgroundUrl1 = firstCardClicked.next().css('background-image');
     var nextDivBackgroundUrl2 = secondCardClicked.next().css('background-image');
       if (nextDivBackgroundUrl1 == nextDivBackgroundUrl2) {
+        firstCardClicked.parent().removeClass('hover');
+        secondCardClicked.parent().removeClass('hover');
       matches++;
         setNulls();
         attempts++;
@@ -133,7 +135,7 @@ function matchCards() {
         randomizeCardArray();
         for (var classIndex = 0; classIndex < cardClassArray.length; classIndex++) {
           var containerDiv = $('<div>', {
-            class: 'container-div'
+            class: 'container-div hover'
           });
           var cardCover = $('<div>', {
             class: 'cover-card'
