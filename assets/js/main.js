@@ -24,6 +24,7 @@ $(event.currentTarget)
   matchCards();
   displayStats();
 
+
 }
 
 function matchCards() {
