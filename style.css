@@ -38,13 +38,9 @@ aside {
   color: #ddf9ff;
 }
 
-.container-div:hover {
-  /* transform: scale(.85); */
-  cursor: grabbing;
-  }
-
   .hover:hover {
    transform: scale(.85);
+   cursor: grabbing;
   }
 .cover-card, .bottom-card, .container-div {
   margin:10px;
