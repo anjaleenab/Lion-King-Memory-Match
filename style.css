@@ -89,8 +89,7 @@ aside > div {
   width: 100px;
   height: 100px;
   margin: 20px 40px 0px 40px;
-  padding-left: 20px;
-
+  text-align: center;
 }
 
 .cover-card  {
