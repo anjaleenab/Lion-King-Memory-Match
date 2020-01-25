@@ -30,14 +30,14 @@ $(event.currentTarget)
 function matchCards() {
   if (clickCounter === 0) {
     firstCardClicked = $(event.currentTarget);
+    firstCardClicked.parent().removeClass('hover');
     clickCounter++;
   } else if(clickCounter > 0 ){
     secondCardClicked = $(event.currentTarget);
+    secondCardClicked.parent().removeClass('hover');
     var nextDivBackgroundUrl1 = firstCardClicked.next().css('background-image');
     var nextDivBackgroundUrl2 = secondCardClicked.next().css('background-image');
       if (nextDivBackgroundUrl1 == nextDivBackgroundUrl2) {
-        firstCardClicked.parent().removeClass('hover');
-        secondCardClicked.parent().removeClass('hover');
       matches++;
         setNulls();
         attempts++;
@@ -53,6 +53,8 @@ function matchCards() {
       setTimeout(function () {
         firstCardClicked.removeClass('hidden');
         secondCardClicked.removeClass('hidden');
+        firstCardClicked.parent().addClass('hover');
+        secondCardClicked.parent().addClass('hover');
         setNulls();
       }, 1500);
 
