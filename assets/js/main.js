@@ -131,10 +131,10 @@ function matchCards() {
       modalButton.appendTo(modalDiv);
     }
 
-    var cardClassArray = ['hyena', 'zazu', 'mufasa', 'pumba', 'rafiki', 'scar', 'simba', 'timon', 'nala'];
+var cardClassArray = ['hyena', 'zazu', 'mufasa', 'pumba', 'rafiki', 'scar', 'simba', 'timon', 'nala',
+'hyena', 'zazu', 'mufasa', 'pumba', 'rafiki', 'scar', 'simba', 'timon', 'nala'];
 
     function createCards() {
-      for(var index =0; index<2; index++){
         randomizeCardArray();
         for (var classIndex = 0; classIndex < cardClassArray.length; classIndex++) {
           var containerDiv = $('<div>', {
@@ -151,7 +151,6 @@ function matchCards() {
           $('#container').append(containerDiv);
         }
       }
-    }
 
     function randomizeCardArray() {
       for (var placeHolder = cardClassArray.length - 1; placeHolder > 0; placeHolder--) {
